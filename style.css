@@ -1,0 +1,14 @@
+/*### TEMPORARY container style properties - used for easy visualization ###*/
+.mainTitle,
+.inputContainer,
+.graphsContainer,
+.totalGraph,
+.comparisonGraph {
+  border-style: solid;
+}
+
+.totalGraph,
+.comparisonGraph {
+  border-color: grey;
+  border-style: dotted;
+}

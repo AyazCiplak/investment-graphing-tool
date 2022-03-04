@@ -2,13 +2,54 @@
 .mainTitle,
 .inputContainer,
 .graphsContainer,
-.totalGraph,
+.mainGraph,
 .comparisonGraph {
   border-style: solid;
 }
 
-.totalGraph,
+.contentContainer {
+  border-style: solid;
+  border-color: red;
+}
+
+.mainGraph,
 .comparisonGraph {
   border-color: grey;
   border-style: dotted;
+}
+
+/*### end of temporary styles ###*/
+
+.contentContainer {
+  display: grid;
+  grid-gap: 10px;
+}
+
+/*If the screen width is above 1000px, splits the main content display into two columns.*/
+@media (min-width: 1000px) {
+  .contentContainer {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.graphsContainer {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+
+.mainGraph {
+  flex: 1;
+}
+
+.comparisonGraph {
+  flex: 1;
+}
+
+.inputContainer {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
 }

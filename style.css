@@ -1,9 +1,9 @@
 /*### TEMPORARY container style properties - used for easy visualization ###*/
 .header-title,
-.inputContainer,
-.graphsContainer,
-.mainGraph,
-.comparisonGraph {
+.input-parameters-container,
+.graphs-container,
+.total-graph,
+.comparison-graph {
   border-style: solid;
 }
 
@@ -12,20 +12,20 @@
   margin: 0;
 }
 
-.contentContainer {
+.main-container {
   border-style: solid;
   border-color: red;
 }
 
-.mainGraph,
-.comparisonGraph {
+.total-graph,
+.comparison-graph {
   border-color: grey;
   border-style: dotted;
 }
 
 /*### end of temporary styles ###*/
 /*###Note: follow property order display type, size, padding/margins, then colours*/
-
+/*All styler elements first list personal properties, then properties of items contained inside them*/
 body {
   width: 95%;
   margin: auto;
@@ -39,68 +39,110 @@ body {
 
 .header-title {
   background-color: grey;
-  text-align: center;
   margin: 20px;
+
+  text-align: center;
 }
 
-.contentContainer {
+.main-container {
   display: grid;
   grid-gap: 15px;
 }
 
 /*If the screen width is above 1000px, splits the main content display into two columns.*/
 @media (min-width: 1000px) {
-  .contentContainer {
+  .main-container {
     grid-template-columns: 2fr 3fr;
   }
 }
 
-.graphsContainer {
+.graphs-container {
   height: 670px;
   display: flex;
   flex-direction: column;
+}
+
+.total-graph {
+  flex: 1;
+  margin-bottom: 10px;
   background-color: lightgrey;
 }
 
-.mainGraph {
-  flex: 1;
-  margin-bottom: 10px;
-}
-
-.comparisonGraph {
+.comparison-graph {
   flex: 1;
   margin-top: 10px;
+  background-color: lightgrey;
 }
 
-.inputContainer {
+.input-parameters-container {
   height: 650px;
-  display: flex;
-  flex-direction: column;
   background-color: lightgrey;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .input-box {
-  flex: 2;
+  flex: 1;
   margin: 10px 20px;
+  border-style: solid;
+
+  display: flex;
+  align-items: center;
+}
+
+.input-message {
+  flex: 3;
   border-style: solid;
 }
 
+.input-receiver {
+  flex: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .calculation-container {
-  flex: 3;
+  flex: 1;
+  border-style: dotted;
+  margin: 10px 20px;
+
   display: flex;
   flex-direction: column;
-  border-style: solid;
-  margin: 10px 20px;
 }
 
 .calculate-button {
   flex: 1;
+  width: 40%;
   border-style: solid;
+  margin-bottom: 5px;
 }
 
 .final-value-display {
   flex: 1;
+  border-style: dotted;
+  margin-top: 5px;
+
+  display: flex;
+}
+
+.final-title {
+  flex: 2;
   border-style: solid;
 }
+
+.final-amount {
+  flex: 3;
+  border-style: solid;
+}
+
+/*Next steps: 
+1. Adjust css style order for all necessary elements
+2. Put buttons into the input container & final formatting
+3. Make graph components
+
+*/

@@ -14,34 +14,67 @@
         <div class="header">
             <h1 class="header-title">INVESTMENT GRAPHING TOOL</h1>
         </div>
-        <div class="contentContainer">
-            <div class="inputContainer">
+        <div class="main-container">
+            <div class="input-parameters-container">
                 <div class="input-box">
-                    <p>Initial investment input</p>
+                    <div class="input-message">
+                        <p>Initial investment input</p>
+                    </div>
+                    <div class="input-receiver">
+                        <form action="script.js">
+                            <input type="number">
+                        </form>
+                    </div>
                 </div>
                 <div class="input-box">
-                    <p>Num of years</p>
+                    <div class="input-message">
+                        <p>Num of years input</p>
+                    </div>
+                    <div class="input-receiver">
+                        <form action="script.js">
+                            <input type="number">
+                        </form>
+                    </div>
                 </div>
                 <div class="input-box">
-                    <p>Interest rate</p>
+                    <div class="input-message">
+                        <p>Interest rate input</p>
+                    </div>
+                    <div class="input-receiver">
+                        <form action="script.js">
+                            <input type="number">
+                        </form>
+                    </div>
                 </div>
                 <div class="input-box">
-                    <p>Recurring contributions</p>
+                    <div class="input-message">
+                        <p>Recurring contributions input</p>
+                    </div>
+                    <div class="input-receiver">
+                        <form action="script.js">
+                            <input type="number">
+                        </form>
+                    </div>
                 </div>
                 <div class="calculation-container">
                     <div class="calculate-button">
                         <p>Contains calculate button.</p>
                     </div>
                     <div class="final-value-display">
-                        <p>Hidden before clicking calculate, displays final value. </p>
+                        <div class="final-title">
+                            <p>(Hidden) Final amt:</p>
+                        </div>
+                        <div class="final-amount">
+                            <p>(Hidden) Num. value</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="graphsContainer">
-                <div class="mainGraph">
+            <div class="graphs-container">
+                <div class="total-graph">
                     <p>This container will contain the graph illustrating total investment progression.</p>
                 </div>
-                <div class="comparisonGraph">
+                <div class="comparison-graph">
                     <p>This container will contain the graph comparing net contributions vs accumuated interest</p>
                 </div>
             </div>

@@ -1,10 +1,15 @@
 /*### TEMPORARY container style properties - used for easy visualization ###*/
-.mainTitle,
+.header-title,
 .inputContainer,
 .graphsContainer,
 .mainGraph,
 .comparisonGraph {
   border-style: solid;
+}
+
+.header-title {
+  padding: 25px;
+  margin: 0;
 }
 
 .contentContainer {
@@ -19,10 +24,28 @@
 }
 
 /*### end of temporary styles ###*/
+/*###Note: follow property order display type, size, padding/margins, then colours*/
+
+body {
+  width: 95%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  background-color: grey;
+  text-align: center;
+  margin: 20px;
+}
 
 .contentContainer {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
 }
 
 /*If the screen width is above 1000px, splits the main content display into two columns.*/
@@ -33,7 +56,7 @@
 }
 
 .graphsContainer {
-  height: 650px;
+  height: 670px;
   display: flex;
   flex-direction: column;
   background-color: lightgrey;
@@ -41,10 +64,12 @@
 
 .mainGraph {
   flex: 1;
+  margin-bottom: 10px;
 }
 
 .comparisonGraph {
   flex: 1;
+  margin-top: 10px;
 }
 
 .inputContainer {
@@ -52,4 +77,30 @@
   display: flex;
   flex-direction: column;
   background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.input-box {
+  flex: 2;
+  margin: 10px 20px;
+  border-style: solid;
+}
+
+.calculation-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  margin: 10px 20px;
+}
+
+.calculate-button {
+  flex: 1;
+  border-style: solid;
+}
+
+.final-value-display {
+  flex: 1;
+  border-style: solid;
 }

@@ -17,7 +17,7 @@
         <div class="main-container">
             <div class="input-parameters-container">
                 <div class="input-box">
-                    <div class="input-message">
+                    <div class="input-label">
                         <p>Initial investment input</p>
                     </div>
                     <div class="input-receiver">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <div class="input-message">
+                    <div class="input-label">
                         <p>Num of years input</p>
                     </div>
                     <div class="input-receiver">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <div class="input-message">
+                    <div class="input-label">
                         <p>Interest rate input</p>
                     </div>
                     <div class="input-receiver">
@@ -47,8 +47,16 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <div class="input-message">
+                    <div class="input-label recurring-input">
                         <p>Recurring contributions input</p>
+                    </div>
+                    <div class="recurring-input-options">
+                        <form>
+                            <label for="monthly">Monthly</label>
+                            <input type="radio" id="monthly" name="contribution-frequency"></br>
+                            <label for="yearly">Yearly</label>
+                            <input type="radio" id="yearly" name="contribution-frequency">
+                        </form>
                     </div>
                     <div class="input-receiver">
                         <form action="script.js">
@@ -56,10 +64,13 @@
                         </form>
                     </div>
                 </div>
-                <div class="calculation-container">
+                <div class="calculation-elements">
                     <div class="calculate-button-container">
                         <form action="script.js">
-                            <input type="button" class="calculate-button" value="Calculator button">
+                            <button type="button" class="calculate-button">
+                                <p>Calculate.(bigger text)</p>
+                            </button>
+                        
                         </form>
                     </div>
                     <div class="final-value-display">

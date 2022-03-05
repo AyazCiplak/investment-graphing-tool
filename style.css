@@ -7,16 +7,6 @@
   border-style: solid;
 }
 
-.header-title {
-  padding: 25px;
-  margin: 0;
-}
-
-.main-container {
-  border-style: solid;
-  border-color: red;
-}
-
 .total-graph,
 .comparison-graph {
   border-color: grey;
@@ -26,6 +16,7 @@
 /*### end of temporary styles ###*/
 /*###Note: follow property order display type, size, padding/margins, then colours*/
 /*All styler elements first list personal properties, then properties of items contained inside them*/
+
 body {
   width: 95%;
   margin: auto;
@@ -38,15 +29,16 @@ body {
 }
 
 .header-title {
+  margin: 15px;
+  padding: 20px;
   background-color: grey;
-  margin: 20px;
 
   text-align: center;
 }
 
 .main-container {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 20px;
 }
 
 /*If the screen width is above 1000px, splits the main content display into two columns.*/
@@ -58,6 +50,7 @@ body {
 
 .graphs-container {
   height: 670px;
+
   display: flex;
   flex-direction: column;
 }
@@ -93,10 +86,22 @@ body {
   align-items: center;
 }
 
-.input-message {
+.input-label {
   flex: 3;
   padding-left: 10px;
   border-style: solid;
+}
+
+.recurring-input {
+  flex: 2;
+}
+
+.recurring-input-options {
+  flex: 1;
+  border-style: solid;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 .input-receiver {
@@ -107,7 +112,11 @@ body {
   justify-content: center;
 }
 
-.calculation-container {
+.numeric-input-form {
+  height: 30px;
+}
+
+.calculation-elements {
   flex: 1;
   border-style: dotted;
   margin: 10px 20px;
@@ -119,18 +128,17 @@ body {
 .calculate-button-container {
   flex: 1;
   width: 40%;
-  margin-bottom: 5px;
-  border-style: solid;
+}
 
-  display: flex block;
-  align-items: stretch;
-  justify-content: stretch;
+.calculate-button {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  text-align: left;
 }
 
 .final-value-display {
   flex: 1;
-  border-style: dotted;
-  margin-top: 5px;
 
   display: flex;
 }
@@ -146,20 +154,9 @@ body {
   border-style: solid;
 }
 
-.numeric-input-form {
-  height: 30px;
-}
-
-.calculate-button {
-  width: 100%;
-  padding: 15px;
-  background-color: green;
-}
 /*Next steps: 
-1. Adjust css style order for all necessary elements
-2. Fix container spacing for calculator button / final amt input container
-(flex, padding, try making both same size and center text within button)
-3. Add radio input to recurring contributions section
-4. Make graph components
+
+1. Compartmentalize radio input container, make both buttons line up to the right
+2. Make graph components
 
 */

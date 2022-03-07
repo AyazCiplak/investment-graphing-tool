@@ -22,7 +22,7 @@ body {
   margin: auto;
 }
 
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,14 +36,14 @@ body {
   text-align: center;
 }
 
-.main-container {
+main {
   display: grid;
   grid-gap: 20px;
 }
 
 /*If the screen width is above 1000px, splits the main content display into two columns.*/
-@media (min-width: 1000px) {
-  .main-container {
+@media (min-width: 1200px) {
+  main {
     grid-template-columns: 2fr 3fr;
   }
 }
@@ -101,6 +101,7 @@ body {
   border-style: solid;
 
   display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
@@ -154,9 +155,23 @@ body {
   border-style: solid;
 }
 
+.test-class {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.test-class-2 {
+  flex: 1;
+  border-style: solid;
+}
+
 /*Next steps: 
 
-1. Compartmentalize radio input container, make both buttons line up to the right
-2. Make graph components
+1. See if I can remove the divs around forms, then replace (or rename if I cant
+  the test-classes. 
+2. Change main container div into a <main> element (and remove its class and just apply styles to main element)
+   Similarily, make a header component for the class above it and just style the header. 
+3. Make graph components
 
 */

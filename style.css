@@ -1,14 +1,14 @@
 /*### TEMPORARY container style properties - used for easy visualization ###*/
-.header-title,
-.input-parameters-container,
-.graphs-container,
-.total-graph,
-.comparison-graph {
+#header-title,
+#input-parameters-container,
+#graphs,
+#total-graph,
+#comparison-graph {
   border-style: solid;
 }
 
-.total-graph,
-.comparison-graph {
+#total-graph,
+#comparison-graph {
   border-color: grey;
   border-style: dotted;
 }
@@ -28,14 +28,6 @@ header {
   justify-content: center;
 }
 
-.header-title {
-  margin: 15px;
-  padding: 20px;
-  background-color: grey;
-
-  text-align: center;
-}
-
 main {
   display: grid;
   grid-gap: 20px;
@@ -46,28 +38,45 @@ main {
   main {
     grid-template-columns: 2fr 3fr;
   }
+
+  .graph-container {
+    padding: 0px 60px;
+  }
 }
 
-.graphs-container {
-  height: 670px;
+#header-title {
+  margin: 15px;
+  padding: 20px;
+  background-color: grey;
 
+  text-align: center;
+}
+
+#graphs {
+  height: 670px;
   display: flex;
   flex-direction: column;
 }
 
-.total-graph {
+.graph-container {
+  flex: 1;
+  background-color: lightgrey;
+  border-style: solid;
+
+  display: flex;
+}
+
+#total-graph {
   flex: 1;
   margin-bottom: 10px;
-  background-color: lightgrey;
 }
 
-.comparison-graph {
+#comparison-graph {
   flex: 1;
   margin-top: 10px;
-  background-color: lightgrey;
 }
 
-.input-parameters-container {
+#input-parameters-container {
   height: 650px;
   background-color: lightgrey;
   padding-top: 10px;
@@ -92,11 +101,11 @@ main {
   border-style: solid;
 }
 
-.recurring-input {
+#recurring-input {
   flex: 2;
 }
 
-.recurring-input-options {
+#recurring-input-container {
   flex: 1;
   border-style: solid;
 
@@ -117,7 +126,7 @@ main {
   height: 30px;
 }
 
-.calculation-elements {
+#calculation-elements {
   flex: 1;
   border-style: dotted;
   margin: 10px 20px;
@@ -138,40 +147,38 @@ main {
   text-align: left;
 }
 
-.final-value-display {
+#final-value-display {
   flex: 1;
 
   display: flex;
 }
 
-.final-title {
+#final-title {
   flex: 2;
   padding-left: 10px;
   border-style: solid;
 }
 
-.final-amount {
+#final-amount {
   flex: 3;
   border-style: solid;
 }
 
-.test-class {
+#frequency-options {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.test-class-2 {
+.frequency {
   flex: 1;
   border-style: solid;
 }
 
 /*Next steps: 
-
-1. See if I can remove the divs around forms, then replace (or rename if I cant
-  the test-classes. 
-2. Change main container div into a <main> element (and remove its class and just apply styles to main element)
-   Similarily, make a header component for the class above it and just style the header. 
-3. Make graph components
+1. Make a sub element in the graphs container. Apply left and right padding if
+the screen width is over 1200 px (same container as the main element), to reduce width
+*Note: Same background colour, different borders for identification
+2. Create graph displays in internal container using grid areas
 
 */

@@ -12,10 +12,10 @@
     </head>
     <body>
         <header>
-            <h1 class="header-title">INVESTMENT GRAPHING TOOL</h1>
+            <h1 id="header-title">INVESTMENT GRAPHING TOOL</h1>
         </header>
         <main>
-            <section class="input-parameters-container">
+            <section id="input-parameters-container">
                 <div class="input-box">
                     <div class="input-label">
                         <p>Initial investment input</p>
@@ -41,18 +41,18 @@
                     </form>
                 </div>
                 <div class="input-box">
-                    <div class="input-label recurring-input">
+                    <div class="input-label" id="recurring-input">
                         <p>Recurring contributions input</p>
                     </div>
-                    <div class="recurring-input-options">
-                        <form action="script.js" class="test-class"> 
-                            <div class="test-class-2">
+                    <div id="recurring-input-container">
+                        <form action="script.js" id="frequency-options"> 
+                            <div class="frequency">
                                 <label for="monthly">Monthly</label>
                                 <input type="radio" id="monthly" name="contribution-frequency"></br>
                             </div>
-                            <div class="test-class-2">
-                            <label for="yearly">Yearly</label>
-                            <input type="radio" id="yearly" name="contribution-frequency">
+                            <div class="frequency">
+                                <label for="yearly">Yearly</label>
+                                <input type="radio" id="yearly" name="contribution-frequency">
                             </div>
                         </form>
                     </div>
@@ -60,7 +60,7 @@
                         <input type="number" class="numeric-input-form">
                     </form>
                 </div>
-                <div class="calculation-elements">
+                <div id="calculation-elements">
                     <div class="calculate-button-container">
                         <form action="script.js">
                             <button type="button" class="calculate-button">
@@ -69,22 +69,26 @@
                         
                         </form>
                     </div>
-                    <div class="final-value-display">
-                        <div class="final-title">
+                    <div id="final-value-display">
+                        <div id="final-title">
                             <p>(Hidden) Final amt:</p>
                         </div>
-                        <div class="final-amount">
+                        <div id="final-amount">
                             <p>(Hidden) Num. value</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="graphs-container">
-                <div class="total-graph">
-                    <p>This container will contain the graph illustrating total investment progression.</p>
+            <section id="graphs">
+                <div class="graph-container">
+                    <div id="total-graph"> 
+                        <p>This container will contain the graph illustrating total investment progression.</p>
+                    </div>
                 </div>
-                <div class="comparison-graph">
-                    <p>This container will contain the graph comparing net contributions vs accumuated interest</p>
+                <div class="graph-container">
+                    <div id="comparison-graph">
+                        <p>This container will contain the graph comparing net contributions vs accumuated interest</p>
+                    </div>
                 </div>
             </section>
         </main>

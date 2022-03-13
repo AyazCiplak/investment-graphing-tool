@@ -3,4 +3,4 @@ Webpage that takes in user input such as investment length, periodic contributio
 
 # Current next steps: 
 - Adjusting input limitations for user input forms
-- Implementing graph structures using CSS grid format
+- Implementing javaScript code to connect user input to graphs

@@ -65,7 +65,7 @@ main {
 
   /*Sets grid display property for container. Subdivides into 3 rows and 3 columns */
   display: grid;
-  grid-template: 4fr 21fr 3fr / 1fr 12fr 1fr;
+  grid-template: 4fr 21fr 3fr / 1fr 25fr 2fr;
 }
 
 .graph-main-title {
@@ -89,6 +89,128 @@ main {
   grid-area: 2/2/3/4;
 
   display: grid;
+  grid-template: repeat(5, 2fr) 1fr / 1fr repeat(8, 3fr) 2fr;
+}
+
+.graph-axes {
+  grid-area: 1/2/6/10;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.indicator-lines {
+  border-bottom: 1px solid grey;
+  margin-left: 10px;
+}
+
+#indicator-1 {
+  grid-area: 1/1/2/10;
+}
+
+#indicator-2 {
+  grid-area: 2/1/3/10;
+}
+
+#indicator-3 {
+  grid-area: 3/1/4/10;
+}
+
+#indicator-4 {
+  grid-area: 4/1/5/10;
+}
+
+.graph-bars {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+#bar-1 {
+  grid-area: 1/2/6/3;
+}
+
+#bar-2 {
+  grid-area: 1/3/6/4;
+}
+
+#bar-3 {
+  grid-area: 1/4/6/5;
+}
+
+#bar-4 {
+  grid-area: 1/5/6/6;
+}
+
+#bar-5 {
+  grid-area: 1/6/6/7;
+}
+
+#bar-6 {
+  grid-area: 1/7/6/8;
+}
+
+#bar-7 {
+  grid-area: 1/8/6/9;
+}
+
+#bar-8 {
+  grid-area: 1/9/6/10;
+}
+
+.axis-values {
+  border-style: dotted;
+  border-width: 1px;
+}
+
+#x-value-1 {
+  grid-area: 6/2/7/3;
+}
+
+#x-value-2 {
+  grid-area: 6/3/7/4;
+}
+
+#x-value-3 {
+  grid-area: 6/4/7/5;
+}
+
+#x-value-4 {
+  grid-area: 6/5/7/6;
+}
+
+#x-value-5 {
+  grid-area: 6/6/7/7;
+}
+
+#x-value-6 {
+  grid-area: 6/7/7/8;
+}
+
+#x-value-7 {
+  grid-area: 6/8/7/9;
+}
+
+#x-value-8 {
+  grid-area: 6/9/7/10;
+}
+
+#y-value-1 {
+  grid-area: 5/1/6/2;
+}
+
+#y-value-2 {
+  grid-area: 4/1/5/2;
+}
+
+#y-value-3 {
+  grid-area: 3/1/4/2;
+}
+
+#y-value-4 {
+  grid-area: 2/1/3/2;
+}
+
+#y-value-5 {
+  grid-area: 1/1/2/2;
 }
 
 #total-graph {
@@ -201,9 +323,6 @@ main {
 }
 
 /*Next steps: 
-1. Make a sub element in the graphs container. Apply left and right padding if
-the screen width is over 1200 px (same container as the main element), to reduce width
-*Note: Same background colour, different borders for identification
-2. Create graph displays in internal container using grid areas
+1. Create graph displays in internal container using grid areas
 
 */

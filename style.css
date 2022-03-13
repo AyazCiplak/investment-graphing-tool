@@ -39,7 +39,7 @@ main {
     grid-template-columns: 2fr 3fr;
   }
 
-  .graph-container {
+  .graph-format-grid {
     padding: 0px 60px;
   }
 }
@@ -58,12 +58,37 @@ main {
   flex-direction: column;
 }
 
-.graph-container {
+.graph-format-grid {
   flex: 1;
   background-color: lightgrey;
   border-style: solid;
 
-  display: flex;
+  /*Sets grid display property for container. Subdivides into 3 rows and 3 columns */
+  display: grid;
+  grid-template: 4fr 21fr 3fr / 1fr 12fr 1fr;
+}
+
+.graph-main-title {
+  background-color: grey;
+  grid-area: 1/1/2/4;
+}
+
+.graph-y-title {
+  border-style: dotted;
+  grid-area: 1/1/4/2;
+}
+
+.graph-x-title {
+  border-style: dotted;
+  grid-area: 3/1/4/4;
+  padding: 0;
+}
+
+.graph-display-grid {
+  background-color: white;
+  grid-area: 2/2/3/4;
+
+  display: grid;
 }
 
 #total-graph {

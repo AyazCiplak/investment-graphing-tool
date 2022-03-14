@@ -87,23 +87,32 @@ function setTotalBars() {
     };
 
     //Computes height percentage of each bar based on the maximum (final) bar's height
-    const heightProportion = (value, maxValue) => (value / maxValue * 100) + "%";
+    const heightProportion = (value) => (value / maxInvestmentValue * 100) + "%";
 
     //Finds proportion of each bar based on the max. value
     for (let i = 0; i < totalBarValues.length; i++){
         const currentValue = totalValueAtIncrement(i+1, totalBarValues.length);
-        document.getElementById(totalBarValues[i]).style.height = heightProportion(currentValue, maxInvestmentValue);
+        document.getElementById(totalBarValues[i]).style.height = heightProportion(currentValue);
     };
 
     //Finds net contributions at any increment of time
     function contributionValueAtIncrement(increment, totalIncrements) {
         const incrementFraction = increment/totalIncrements;
         return initialAmount + (years*incrementFraction)*recurring*frequency;
-    }
+    };
 
     for (let i = 0; i < contributionBarValues.length; i++){
         const currentValue = contributionValueAtIncrement(i+1, contributionBarValues.length);
-        document.getElementById(contributionBarValues[i]).style.height = heightProportion(currentValue, maxInvestmentValue);
+        document.getElementById(contributionBarValues[i]).style.height = heightProportion(currentValue);
     };
+
+    function interestValueAtIncrement(increment, totalIncrements) {
+        return totalValueAtIncrement(increment, totalIncrements) - contributionValueAtIncrement(increment, totalIncrements);
+    };
+
+    for (let i = 0; i < interestBarValues.length; i++) {
+        const currentValue = interestValueAtIncrement(i+1, interestBarValues.length);
+        document.getElementById(interestBarValues[i]).style.height = heightProportion(currentValue);
+    }
 
 }

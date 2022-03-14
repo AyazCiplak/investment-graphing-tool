@@ -7,16 +7,6 @@ html {
   height: 100%;
 }
 
-#total-graph,
-#comparison-graph {
-  border-color: grey;
-  border-style: dotted;
-}
-
-/*### end of temporary styles ###*/
-/*###Note: follow property order display type, size, padding/margins, then colours*/
-/*All styler elements first list personal properties, then properties of items contained inside them*/
-
 body {
   width: 95%;
   margin: auto;
@@ -325,6 +315,7 @@ main {
   text-align: center;
   background-color: rgb(235, 235, 235);
   border-style: solid;
+  border-color: black;
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 15px;
   border-radius: 5px;
@@ -332,7 +323,10 @@ main {
 
 #calculation-elements {
   flex: 1;
-  margin: 10px 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 
   display: flex;
   flex-direction: column;
@@ -340,9 +334,10 @@ main {
 
 #calculate-button-container {
   flex: 3;
-  width: 40%;
+  margin-bottom: 10px;
 
   display: flex;
+  justify-content: flex-end;
 }
 
 #calculate-button {
@@ -350,25 +345,41 @@ main {
   padding-left: 10px;
   padding-right: 10px;
   height: 100%;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
 
   text-align: left;
 }
 
 #final-value-display {
   flex: 2;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
 
   display: flex;
 }
 
 #final-title {
   flex: 2;
-  padding-left: 10px;
-  border-style: solid;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #final-amount {
   flex: 3;
-  border-style: solid;
+  text-align: center;
+  padding-right: 40px;
+  margin: auto;
+  font-size: 20px;
 }
 
 #frequency-options {

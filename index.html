@@ -15,13 +15,14 @@
             <h1 id="header-title">INVESTMENT GRAPHING TOOL</h1>
         </header>
         <main>
+            <!-- Creates all user input forms -->
             <section id="input-parameters-container">
                 <div class="input-box">
                     <div class="input-label">
                         <p>Initial investment input</p>
                     </div>
                     <form class="input-receiver" action="script.js">
-                        <input type="number" class="numeric-input-form">
+                        <input type="number" class="numeric-input-form" id="initial-investment" min="0">
                     </form>
                 </div>
                 <div class="input-box">
@@ -29,7 +30,7 @@
                         <p>Num of years input</p>
                     </div>
                     <form class="input-receiver" action="script.js">
-                        <input type="number" class="numeric-input-form">
+                        <input type="number" class="numeric-input-form" id="years" min="0">
                     </form>
                 </div>
                 <div class="input-box">
@@ -37,7 +38,7 @@
                         <p>Interest rate input</p>
                     </div>
                     <form class="input-receiver" action="script.js">
-                        <input type="number" class="numeric-input-form">
+                        <input type="number" class="numeric-input-form" id="interest-rate" min="0">
                     </form>
                 </div>
                 <div class="input-box">
@@ -57,13 +58,13 @@
                         </form>
                     </div>
                     <form class="input-receiver" action="script.js">
-                        <input type="number" class="numeric-input-form">
+                        <input type="number" class="numeric-input-form" value="0" id="recurring-amount" min="0">
                     </form>
                 </div>
                 <div id="calculation-elements">
                     <div class="calculate-button-container">
                         <form action="script.js">
-                            <button type="button" class="calculate-button">
+                            <button type="button" class="calculate-button" onclick="displayValues()">
                                 <p>Calculate.(bigger text)</p>
                             </button>
                         
@@ -74,17 +75,18 @@
                             <p>(Hidden) Final amt:</p>
                         </div>
                         <div id="final-amount">
-                            <p>(Hidden) Num. value</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- Creates both graphs -->
             <section id="graphs">
                 <div class="graph-format-grid">
                     <div class="graph-main-title"></div>
                     <div class="graph-y-title"></div>
                     <div class="graph-x-title"></div>
                     <div class="graph-display-grid">
+                        <!-- Creates internal graph components (grid lines, display bars, etc.)-->
                         <div class="graph-axes"></div>
                         <div class="indicator-lines" id="indicator-1"></div>
                         <div class="indicator-lines" id="indicator-2"></div>
@@ -109,7 +111,6 @@
                         <div class="axis-values" id="x-value-7"></div>
                         <div class="axis-values" id="x-value-8"></div>
 
-                        
                         <div class="axis-values" id="y-value-1"></div>
                         <div class="axis-values" id="y-value-2"></div>
                         <div class="axis-values" id="y-value-3"></div>

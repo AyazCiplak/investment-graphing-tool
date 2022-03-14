@@ -128,12 +128,24 @@ main {
   align-items: flex-end;
 }
 
-.graph-bar {
-  align-items: center;
-  justify-content: center;
+.total-graph-bar {
   width: 40%;
   height: 10%;
   border-style: solid;
+}
+
+.left-graph-bar {
+  width: 20%;
+  height: 15%;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.right-graph-bar {
+  width: 20%;
+  height: 10%;
+  border-style: solid;
+  border-width: 2px;
 }
 
 #bar-1-container {

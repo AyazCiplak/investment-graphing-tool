@@ -119,40 +119,52 @@ main {
   grid-area: 4/1/5/10;
 }
 
-.graph-bars {
+.graph-bar-container {
   border-style: dotted;
   border-width: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-#bar-1 {
+.graph-bar {
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 10%;
+  border-style: solid;
+}
+
+#bar-1-container {
   grid-area: 1/2/6/3;
 }
 
-#bar-2 {
+#bar-2-container {
   grid-area: 1/3/6/4;
 }
 
-#bar-3 {
+#bar-3-container {
   grid-area: 1/4/6/5;
 }
 
-#bar-4 {
+#bar-4-container {
   grid-area: 1/5/6/6;
 }
 
-#bar-5 {
+#bar-5-container {
   grid-area: 1/6/6/7;
 }
 
-#bar-6 {
+#bar-6-container {
   grid-area: 1/7/6/8;
 }
 
-#bar-7 {
+#bar-7-container {
   grid-area: 1/8/6/9;
 }
 
-#bar-8 {
+#bar-8-container {
   grid-area: 1/9/6/10;
 }
 

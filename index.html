@@ -49,11 +49,12 @@
                         <form action="script.js" id="frequency-options"> 
                             <div class="frequency">
                                 <label for="monthly">Monthly</label>
-                                <input type="radio" id="monthly" name="contribution-frequency"></br>
+                                <!-- Pre-selects first radio input -->
+                                <input type="radio" id="monthly" name="contribution-frequency" value="12" checked></br>
                             </div>
                             <div class="frequency">
                                 <label for="yearly">Yearly</label>
-                                <input type="radio" id="yearly" name="contribution-frequency">
+                                <input type="radio" id="yearly" name="contribution-frequency" value="1">
                             </div>
                         </form>
                     </div>
@@ -93,14 +94,30 @@
                         <div class="indicator-lines" id="indicator-3"></div>
                         <div class="indicator-lines" id="indicator-4"></div>
 
-                        <div class="graph-bars" id="bar-1"></div>
-                        <div class="graph-bars" id="bar-2"></div>
-                        <div class="graph-bars" id="bar-3"></div>
-                        <div class="graph-bars" id="bar-4"></div>
-                        <div class="graph-bars" id="bar-5"></div>
-                        <div class="graph-bars" id="bar-6"></div>
-                        <div class="graph-bars" id="bar-7"></div>
-                        <div class="graph-bars" id="bar-8"></div>
+                        <div class="graph-bar-container" id="bar-1-container">
+                            <div class="graph-bar" id="bar-1"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-2-container">
+                            <div class="graph-bar" id="bar-2"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-3-container">
+                            <div class="graph-bar" id="bar-3"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-4-container">
+                            <div class="graph-bar" id="bar-4"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-5-container">
+                            <div class="graph-bar" id="bar-5"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-6-container">
+                            <div class="graph-bar" id="bar-6"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-7-container">
+                            <div class="graph-bar" id="bar-7"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-8-container">
+                            <div class="graph-bar" id="bar-8"></div>
+                        </div>
 
                         <div class="axis-values" id="x-value-1"></div>
                         <div class="axis-values" id="x-value-2"></div>
@@ -130,14 +147,30 @@
                         <div class="indicator-lines" id="indicator-3"></div>
                         <div class="indicator-lines" id="indicator-4"></div>
 
-                        <div class="graph-bars" id="bar-1"></div>
-                        <div class="graph-bars" id="bar-2"></div>
-                        <div class="graph-bars" id="bar-3"></div>
-                        <div class="graph-bars" id="bar-4"></div>
-                        <div class="graph-bars" id="bar-5"></div>
-                        <div class="graph-bars" id="bar-6"></div>
-                        <div class="graph-bars" id="bar-7"></div>
-                        <div class="graph-bars" id="bar-8"></div>
+                        <div class="graph-bar-container" id="bar-1-container">
+                            <div class="graph-bar" id="bar-1"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-2-container">
+                            <div class="graph-bar" id="bar-2"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-3-container">
+                            <div class="graph-bar" id="bar-3"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-4-container">
+                            <div class="graph-bar" id="bar-4"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-5-container">
+                            <div class="graph-bar" id="bar-5"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-6-container">
+                            <div class="graph-bar" id="bar-6"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-7-container">
+                            <div class="graph-bar" id="bar-7"></div>
+                        </div>
+                        <div class="graph-bar-container" id="bar-8-container">
+                            <div class="graph-bar" id="bar-8"></div>
+                        </div>
 
                         <div class="axis-values" id="x-value-1"></div>
                         <div class="axis-values" id="x-value-2"></div>

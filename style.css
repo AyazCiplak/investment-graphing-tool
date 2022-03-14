@@ -120,9 +120,6 @@ main {
 }
 
 .graph-bar-container {
-  border-style: dotted;
-  border-width: 2px;
-
   display: flex;
   justify-content: center;
   align-items: flex-end;

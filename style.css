@@ -1,10 +1,10 @@
-/*### TEMPORARY container style properties - used for easy visualization ###*/
-#header-title,
-#input-parameters-container,
-#graphs,
-#total-graph,
-#comparison-graph {
-  border-style: solid;
+html {
+  background: linear-gradient(
+    150deg,
+    rgb(55, 55, 55) 49.9%,
+    rgb(45, 45, 45) 49.9%
+  );
+  height: 100%;
 }
 
 #total-graph,
@@ -20,6 +20,7 @@
 body {
   width: 95%;
   margin: auto;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 header {
@@ -41,13 +42,17 @@ main {
 
   .graph-format-grid {
     padding: 0px 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 
 #header-title {
-  margin: 15px;
+  margin: 20px;
   padding: 20px;
-  background-color: grey;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  font-size: 45px;
 
   text-align: center;
 }
@@ -60,8 +65,9 @@ main {
 
 .graph-format-grid {
   flex: 1;
-  background-color: lightgrey;
+  background-color: rgb(235, 235, 235);
   border-style: solid;
+  border-radius: 20px;
 
   /*Sets grid display property for container. Subdivides into 3 rows and 3 columns */
   display: grid;
@@ -69,23 +75,24 @@ main {
 }
 
 .graph-main-title {
-  background-color: grey;
   grid-area: 1/1/2/4;
+  margin: auto;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .graph-y-title {
-  border-style: dotted;
   grid-area: 1/1/4/2;
+  margin: auto;
 }
 
 .graph-x-title {
-  border-style: dotted;
   grid-area: 3/1/4/4;
   padding: 0;
+  margin: auto;
 }
 
 .graph-display-grid {
-  background-color: white;
   grid-area: 2/2/3/4;
 
   display: grid;
@@ -127,22 +134,35 @@ main {
 
 .total-graph-bar {
   width: 40%;
-  height: 10%;
+  height: 0%;
+  background-color: rgb(82, 187, 82);
   border-style: solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-width: 2px;
+  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
 }
 
 .left-graph-bar {
   width: 20%;
-  height: 15%;
+  height: 0%;
   border-style: solid;
+  background-color: rgb(246, 249, 60);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-width: 2px;
+  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
 }
 
 .right-graph-bar {
   width: 20%;
-  height: 10%;
+  height: 0%;
   border-style: solid;
+  background-color: rgb(47, 139, 234);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-width: 2px;
+  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
 }
 
 #bar-1-container {
@@ -177,9 +197,15 @@ main {
   grid-area: 1/9/6/10;
 }
 
-.axis-values {
-  border-style: dotted;
-  border-width: 1px;
+.x-axis-values {
+  margin: auto;
+  font-size: 15px;
+}
+
+.y-axis-values {
+  font-size: 10px;
+  text-align: right;
+  padding-right: 2px;
 }
 
 .x-value-1 {
@@ -246,7 +272,7 @@ main {
 
 #input-parameters-container {
   height: 650px;
-  background-color: lightgrey;
+  background-color: rgb(82, 187, 82);
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -258,6 +284,9 @@ main {
   flex: 1;
   margin: 10px 20px;
   border-style: solid;
+  border-radius: 20px;
+  /*background-color: rgb(235, 235, 235);*/
+  background-color: rgb(152, 152, 152);
 
   display: flex;
   align-items: center;
@@ -265,17 +294,18 @@ main {
 
 .input-label {
   flex: 3;
-  padding-left: 10px;
-  border-style: solid;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 25px;
 }
 
 #recurring-input {
   flex: 2;
+  font-size: 24px;
 }
 
 #recurring-input-container {
   flex: 1;
-  border-style: solid;
 
   display: flex;
   align-items: flex-end;
@@ -292,31 +322,40 @@ main {
 
 .numeric-input-form {
   height: 30px;
+  text-align: center;
+  background-color: rgb(235, 235, 235);
+  border-style: solid;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
 #calculation-elements {
   flex: 1;
-  border-style: dotted;
   margin: 10px 20px;
 
   display: flex;
   flex-direction: column;
 }
 
-.calculate-button-container {
-  flex: 1;
+#calculate-button-container {
+  flex: 3;
   width: 40%;
+
+  display: flex;
 }
 
-.calculate-button {
+#calculate-button {
+  flex: 1;
   padding-left: 10px;
   padding-right: 10px;
+  height: 100%;
 
   text-align: left;
 }
 
 #final-value-display {
-  flex: 1;
+  flex: 2;
 
   display: flex;
 }
@@ -340,7 +379,8 @@ main {
 
 .frequency {
   flex: 1;
-  border-style: solid;
+  font-size: 18px;
+  margin: 5px;
 }
 
 /*Next steps: 

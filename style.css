@@ -1,10 +1,13 @@
+/* ###### PROPERTY ORDERING: BOX, VISUAL, TEXT, MISC., LAYOUT ###### */
+
+/* ###### PROPERTIES OF WEBSITE HEADER AND MAIN ELEMENTS ###### */
 html {
+  height: 100%;
   background: linear-gradient(
     150deg,
     rgb(55, 55, 55) 49.9%,
     rgb(45, 45, 45) 49.9%
   );
-  height: 100%;
 }
 
 body {
@@ -32,32 +35,163 @@ main {
 
   .graph-format-grid {
     padding: 0px 60px;
-    margin-top: 5px;
-    margin-bottom: 5px;
   }
 }
 
 #header-title {
   margin: 20px;
   padding: 20px;
-  background-color: rgb(235, 235, 235);
   border-radius: 20px;
+  background-color: rgb(235, 235, 235);
   font-size: 45px;
 
   text-align: center;
 }
 
-#graphs {
-  height: 670px;
+/* ###### PROPERTIES OF USER INPUT CONTAINER AND INTERNAL ELEMENTS */
+#input-parameters-container {
+  height: 650px;
+  padding: 10px 0px;
+  background-color: rgb(82, 187, 82);
+
   display: flex;
   flex-direction: column;
 }
 
-.graph-format-grid {
+.input-box {
   flex: 1;
+  margin: 10px 20px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: rgb(152, 152, 152);
+
+  display: flex;
+  align-items: center;
+}
+
+.input-label {
+  flex: 3;
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#recurring-input {
+  flex: 2;
+  font-size: 24px;
+}
+
+#recurring-input-container {
+  flex: 1;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.input-receiver {
+  flex: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numeric-input-form {
+  height: 30px;
   background-color: rgb(235, 235, 235);
   border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 15px;
+
+  text-align: center;
+}
+
+#calculation-elements {
+  flex: 1;
+  margin: 0px 20px 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#calculate-button-container {
+  flex: 3;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+#calculate-button {
+  flex: 1;
+  height: 100%;
+  margin-right: 10px;
+  padding: 0px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+
+  text-align: left;
+}
+
+#final-value-display {
+  flex: 2;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+
+  display: flex;
+}
+
+#final-title {
+  flex: 2;
+  margin: auto 0px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+
+  text-align: left;
+}
+
+#final-amount {
+  flex: 3;
+  margin: auto;
+  padding-right: 40px;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+#frequency-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.frequency {
+  flex: 1;
+  margin: 5px;
+  font-size: 18px;
+}
+
+/* ###### PROPERTIES OF GRAPH CONTAINERS AND INTERNAL ELEMENTS ###### */
+#graphs {
+  height: 670px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subdivides grid containers into title and graph display sections */
+.graph-format-grid {
+  flex: 1;
+  margin: 5px 0px;
   border-radius: 20px;
+  border-style: solid;
+  background-color: rgb(235, 235, 235);
 
   /*Sets grid display property for container. Subdivides into 3 rows and 3 columns */
   display: grid;
@@ -67,18 +201,18 @@ main {
 .graph-main-title {
   grid-area: 1/1/2/4;
   margin: auto;
-  font-weight: bold;
   font-size: 20px;
-}
-
-.graph-y-title {
-  grid-area: 1/1/4/2;
-  margin: auto;
+  font-weight: bold;
 }
 
 .graph-x-title {
   grid-area: 3/1/4/4;
-  padding: 0;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.graph-y-title {
+  grid-area: 1/1/4/2;
   margin: auto;
 }
 
@@ -95,8 +229,9 @@ main {
   border-left: 3px solid black;
 }
 
+/* Design and display of horizontal indicator lines */
 .indicator-lines {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(152, 152, 152);
   margin-left: 10px;
 }
 
@@ -122,39 +257,7 @@ main {
   align-items: flex-end;
 }
 
-.total-graph-bar {
-  width: 40%;
-  height: 0%;
-  background-color: rgb(82, 187, 82);
-  border-style: solid;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-width: 2px;
-  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
-}
-
-.left-graph-bar {
-  width: 20%;
-  height: 0%;
-  border-style: solid;
-  background-color: rgb(246, 249, 60);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-width: 2px;
-  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
-}
-
-.right-graph-bar {
-  width: 20%;
-  height: 0%;
-  border-style: solid;
-  background-color: rgb(47, 139, 234);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-width: 2px;
-  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
-}
-
+/* Defines grid containers for graph bars */
 #bar-1-container {
   grid-area: 1/2/6/3;
 }
@@ -187,17 +290,35 @@ main {
   grid-area: 1/9/6/10;
 }
 
-.x-axis-values {
-  margin: auto;
-  font-size: 15px;
+/* Styles graph bars for total investment graph and net contributions/interest graph */
+.total-graph-bars,
+.left-graph-bar,
+.right-graph-bar {
+  height: 0%;
+  border-style: solid;
+  border-width: 2px;
+  transition: all 0.25s ease-in-out; /* Motion animation of the movement of the graph's bars */
 }
 
-.y-axis-values {
-  font-size: 10px;
-  text-align: right;
-  padding-right: 2px;
+.total-graph-bars {
+  width: 40%;
+  background-color: rgb(82, 187, 82);
+  border-radius: 10px 10px 0px 0px;
 }
 
+.left-graph-bar {
+  width: 20%;
+  background-color: rgb(246, 249, 60);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.right-graph-bar {
+  width: 20%;
+  background-color: rgb(47, 139, 234);
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* Defines grid containers for graph bars */
 .x-value-1 {
   grid-area: 6/2/7/3;
 }
@@ -250,151 +371,15 @@ main {
   grid-area: 1/1/2/2;
 }
 
-#total-graph {
-  flex: 1;
-  margin-bottom: 10px;
-}
-
-#comparison-graph {
-  flex: 1;
-  margin-top: 10px;
-}
-
-#input-parameters-container {
-  height: 650px;
-  background-color: rgb(82, 187, 82);
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.input-box {
-  flex: 1;
-  margin: 10px 20px;
-  border-style: solid;
-  border-radius: 20px;
-  /*background-color: rgb(235, 235, 235);*/
-  background-color: rgb(152, 152, 152);
-
-  display: flex;
-  align-items: center;
-}
-
-.input-label {
-  flex: 3;
-  padding-left: 20px;
-  font-weight: 500;
-  font-size: 25px;
-}
-
-#recurring-input {
-  flex: 2;
-  font-size: 24px;
-}
-
-#recurring-input-container {
-  flex: 1;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
-.input-receiver {
-  flex: 2;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.numeric-input-form {
-  height: 30px;
-  text-align: center;
-  background-color: rgb(235, 235, 235);
-  border-style: solid;
-  border-color: black;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 15px;
-  border-radius: 5px;
-}
-
-#calculation-elements {
-  flex: 1;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-#calculate-button-container {
-  flex: 3;
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: flex-end;
-}
-
-#calculate-button {
-  flex: 1;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 100%;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  margin-right: 10px;
-
-  text-align: left;
-}
-
-#final-value-display {
-  flex: 2;
-  background-color: rgb(235, 235, 235);
-  border-radius: 10px;
-
-  display: flex;
-}
-
-#final-title {
-  flex: 2;
-  padding-left: 20px;
-  text-align: left;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#final-amount {
-  flex: 3;
-  text-align: center;
-  padding-right: 40px;
+/* Styles graph bars for total investment graph and net contributions/interest graph */
+.x-axis-values {
   margin: auto;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-#frequency-options {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.y-axis-values {
+  padding-right: 2px;
+  font-size: 10px;
+
+  text-align: right;
 }
-
-.frequency {
-  flex: 1;
-  font-size: 18px;
-  margin: 5px;
-}
-
-/*Next steps: 
-1. Create graph displays in internal container using grid areas
-
-*/

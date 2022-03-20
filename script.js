@@ -114,5 +114,4 @@ function setTotalBars() {
         const currentValue = interestValueAtIncrement(i+1, interestBarValues.length);
         document.getElementById(interestBarValues[i]).style.height = heightProportion(currentValue);
     }
-
 }

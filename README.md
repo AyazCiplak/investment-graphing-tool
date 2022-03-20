@@ -3,7 +3,6 @@ Webpage that takes in user input such as investment length, periodic contributio
 
 # Current next steps: 
 - Adding final style elements to final value display, user input boxes and graph titles / bars
-- Reorganizing code structure of style elements
 - Adding hover functionality to graph bars
 
 # Screenshots

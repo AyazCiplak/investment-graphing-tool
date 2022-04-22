@@ -31,8 +31,11 @@ function setAxes() {
     };
     
     //Displays final value of investment
+    if (futureValue == "NaN") {
+        document.getElementById("final-amount").innerHTML = "Invalid input"
+    } else {
     document.getElementById("final-amount").innerHTML = futureValue + " $"
-
+    }
 };
 
 function setTotalBars() {

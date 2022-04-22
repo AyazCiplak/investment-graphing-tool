@@ -63,7 +63,7 @@ main {
   margin: 10px 20px;
   border-radius: 20px;
   border-style: solid;
-  background-color: rgb(152, 152, 152);
+  background-color: rgb(190, 190, 190);
 
   display: flex;
   align-items: center;
@@ -110,38 +110,35 @@ main {
 }
 
 #calculation-elements {
-  flex: 1;
-  margin: 0px 20px 10px 20px;
+  flex: 0.8;
+  margin: 10px 20px;
 
   display: flex;
-  flex-direction: column;
 }
 
 #calculate-button-container {
-  flex: 3;
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: flex-end;
+  flex: 1;
+  padding-right: 20px;
+  /*align-items: center;*/
 }
 
 #calculate-button {
-  flex: 1;
-  height: 100%;
-  margin-right: 10px;
-  padding: 0px 20px;
-  border-radius: 10px;
-  font-size: 20px;
+  width: 100%;
+  height: 90px;
+  border-radius: 20px;
+  font-size: 25px;
   font-weight: bold;
   font-family: "Trebuchet MS", Arial, sans-serif;
 
-  text-align: left;
+  text-align: center;
 }
 
 #final-value-display {
   flex: 2;
-  background-color: rgb(235, 235, 235);
-  border-radius: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: rgb(190, 190, 190);
+  font-size: 25px;
 
   display: flex;
 }
@@ -150,7 +147,7 @@ main {
   flex: 2;
   margin: auto 0px;
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 
   text-align: left;
@@ -160,7 +157,7 @@ main {
   flex: 3;
   margin: auto;
   padding-right: 40px;
-  font-size: 20px;
+  font-size: 30px;
 
   text-align: center;
 }

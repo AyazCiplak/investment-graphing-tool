@@ -6,4 +6,4 @@ Webpage that takes in user input such as investment length, periodic contributio
 
 # Potential Improvements
 - Adding hover functionality to graph bars
-- Formatting of final amount
+- Formatting of final amount & graph increment numbers
